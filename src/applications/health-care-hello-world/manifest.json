@@ -1,0 +1,6 @@
+{
+  "appName": "Health Care Hello World",
+  "entryFile": "./app-entry.jsx",
+  "entryName": "health-care-hello-world",
+  "rootUrl": "/health-care/hello-world"
+}
