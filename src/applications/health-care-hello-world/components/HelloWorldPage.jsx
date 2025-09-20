@@ -25,13 +25,11 @@ export default function HelloWorldPage() {
   );
 
   const renderInfo = cwia => {
-    let x;
-    if (cwia.length === 0) {
-      x = <p>no data collected</p>;
-    } else {
-      x = <p>there are {cwia.length} entries</p>;
-    }
-    return x;
+    return cwia.length === 0 ? (
+      <p>no data collected</p>
+    ) : (
+      <p>there are {cwia.length} entries</p>
+    );
   };
 
   const displeyInformation = cwia => {
