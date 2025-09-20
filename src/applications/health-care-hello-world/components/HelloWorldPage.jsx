@@ -45,7 +45,7 @@ export default function HelloWorldPage() {
       <h1>Pulling information from : https://services.arcgis.com </h1>
       <hr />
       {renderInfo(civilWarInfoArray)}
-      {displeyInformation(civilWarInfoArray)}
+      <div className="battle-grid">{displeyInformation(civilWarInfoArray)}</div>
     </main>
   );
 }
