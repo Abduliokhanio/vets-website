@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HWPCardComponent from './HWPCardComponent';
 
 export default function HelloWorldPage() {
   const [civilWarInfoArray, setCivilWarInfoArray] = useState([]);
@@ -36,15 +37,7 @@ export default function HelloWorldPage() {
   const displeyInformation = cwia => {
     return cwia.map(element => (
       <div key={element.attributes.OBJECTID}>
-        <p>ID: {element.attributes.OBJECTID}</p>
-        <p>BATTLE NAME: {element.attributes.Battle}</p>
-        <p>CAMPAIGN NAME: {element.attributes.Campaign}</p>
-        <p>OTHER NAME: {element.attributes.OtherName}</p>
-        <p>
-          Confederate Commander - {element.attributes.CSACom} vs States
-          Commander - {element.attributes.USACom}
-        </p>
-        <p>Victor: {element.attributes.Victor}</p>
+        <HWPCardComponent element={element} />
       </div>
     ));
   };
