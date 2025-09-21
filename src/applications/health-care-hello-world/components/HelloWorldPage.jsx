@@ -25,7 +25,9 @@ export default function HelloWorldPage() {
     return cwia.length === 0 ? (
       <p>no data collected</p>
     ) : (
-      <p>there are {cwia.length} entries</p>
+      <p>
+        there are <b>{cwia.length}</b> entries
+      </p>
     );
   };
 
@@ -39,9 +41,15 @@ export default function HelloWorldPage() {
 
   return (
     <main>
-      <h1>Pulling information from : https://services.arcgis.com </h1>
-      <hr />
-      {renderInfo(civilWarInfoArray)}
+      <div style={{ paddingLeft: '20px' }}>
+        <h1 style={{ paddingTop: '20px' }}>
+          Pulling information from : https://services.arcgis.com{' '}
+        </h1>
+        <div style={{ paddingRight: '20px' }}>
+          <hr />
+        </div>
+        {renderInfo(civilWarInfoArray)}
+      </div>
       <div className="battle-grid">{displeyInformation(civilWarInfoArray)}</div>
     </main>
   );
