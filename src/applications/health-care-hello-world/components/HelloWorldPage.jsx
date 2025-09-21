@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import HWPCardComponent from './HWPCardComponent';
+import HelloWorldPageTitleComponent from './HelloWorldPageTitleComponent';
 
 export default function HelloWorldPage() {
   const [civilWarInfoArray, setCivilWarInfoArray] = useState([]);
@@ -42,9 +43,7 @@ export default function HelloWorldPage() {
   return (
     <main>
       <div style={{ paddingLeft: '20px' }}>
-        <h1 style={{ paddingTop: '20px' }}>
-          Pulling information from : https://services.arcgis.com{' '}
-        </h1>
+        <HelloWorldPageTitleComponent />
         <div style={{ paddingRight: '20px' }}>
           <hr />
         </div>
