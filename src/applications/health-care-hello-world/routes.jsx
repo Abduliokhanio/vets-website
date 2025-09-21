@@ -1,8 +1,5 @@
 import HelloWorldPage from './components/HelloWorldPage';
 
-const routes = [
-  { path: '/', exact: true, component: HelloWorldPage },
-  { path: '/*', component: HelloWorldPage },
-];
+const route = [{ path: '/', exact: true, component: HelloWorldPage }];
 
-export default routes;
+export default route;
