@@ -1,6 +1,20 @@
 import React from 'react';
+import GeneralsVsComponent from './GeneralsVsComponent';
 
 export default function HWPCardComponent({ element }) {
+  const otherNameChecker = ele => {
+    return ele.attributes.OtherName.trim() !== '' ? (
+      <p>
+        <b>OTHER NAME:</b> {element.attributes.OtherName}
+      </p>
+    ) : (
+      <p>
+        <b>OTHER NAME:</b>
+        No other name provided
+      </p>
+    );
+  };
+
   return (
     <va-card
       class="record-list-item vads-u-margin-bottom--2p5"
@@ -15,18 +29,8 @@ export default function HWPCardComponent({ element }) {
       <p>
         <b>CAMPAIGN NAME:</b> {element.attributes.Campaign}
       </p>
-      <p>
-        <b>OTHER NAME:</b> {element.attributes.OtherName}
-      </p>
-      <hr />
-      <p>
-        <b>Confederate Commander</b> - {element.attributes.CSACom}
-      </p>
-      <p>vs </p>
-      <p>
-        <b>States Commander</b> - {element.attributes.USACom}
-      </p>
-      <hr />
+      {otherNameChecker(element)}
+      <GeneralsVsComponent element={element} />
       <p>
         <b>Victor:</b> {element.attributes.Victor}
       </p>
