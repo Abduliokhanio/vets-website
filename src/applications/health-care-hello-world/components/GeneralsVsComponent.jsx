@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function GeneralsVsComponent({ element }) {
   return (
-    <va-card>
+    <va-card background>
       <p>
         <b>Confederate Commander</b> - {element.attributes.CSACom}
       </p>
