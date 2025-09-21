@@ -2,7 +2,10 @@ import React from 'react';
 
 export default function HWPCardComponent({ element }) {
   return (
-    <va-card class="record-list-item vads-u-margin-bottom--2p5">
+    <va-card
+      class="record-list-item vads-u-margin-bottom--2p5"
+      style={{ maxWidth: '250px' }}
+    >
       <p>
         <b>ID:</b> {element.attributes.OBJECTID}
       </p>
