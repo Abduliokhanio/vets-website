@@ -49,6 +49,7 @@ export default function HelloWorldPage() {
         </div>
         {renderInfo(civilWarInfoArray)}
       </div>
+
       <div className="battle-grid">{displeyInformation(civilWarInfoArray)}</div>
     </main>
   );
